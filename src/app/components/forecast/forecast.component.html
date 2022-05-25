@@ -1,0 +1,11 @@
+<h2>Get the Forecast</h2>
+<p>How many days would you like forecasted?</p>
+
+<form (ngSubmit)="submitDays()">
+    <label for="numberOfDays">Enter up to 5</label>
+    <input type="number" name="numberOfDays" id="numberOfDays" [(ngModel)]="numberOfDays" min="0" max="5">
+
+    <input type="submit" value="Go!">
+</form>
+
+<app-day [numberOfDays]="numberOfDays" ></app-day>
