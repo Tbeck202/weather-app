@@ -8,13 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DayComponent implements OnInit {
   @Input() numberOfDays!: number;
   @Input() forecast: any
-
+  
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
-  getForecast(e: any) { console.log(e);
+  getForecast() { 
+    // console.log(`Hi from day component: ${this.forecast}`);
+    
     
   }
 
