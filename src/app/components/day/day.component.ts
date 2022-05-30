@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-day',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DayComponent implements OnInit {
   @Input() numberOfDays!: number;
-  @Input() forecast: any
+  @Input() fullForecast: any
   
   constructor() { }
 
@@ -15,10 +15,18 @@ export class DayComponent implements OnInit {
     
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(`Hi from day component: ${this.numberOfDays}`);
+    console.log(`Hi from day component: ${this.fullForecast}`);
+  }
+
   getForecast() { 
+    // console.log(`Hi from day component: ${this.numberOfDays}`);
+    // console.log(`Hi from day component: ${this.numberOfDays}`);
     // console.log(`Hi from day component: ${this.forecast}`);
     
     
   }
 
 }
+
